@@ -1,0 +1,24 @@
+{
+    "title": "Ascendance of a Bookworm",
+    "subtitle": "~ I would do anything to become a librarian ~",
+    "books": [{
+        "title": "Part I",
+        "content": "part1/__nav.json"
+    }, {
+        "title": "Part II",
+        "content": "",
+        "disabled": true
+    }, {
+        "title": "Part III",
+        "content": "",
+        "disabled": true
+    }, {
+        "title": "Part IV",
+        "content": "",
+        "disabled": true
+    }, {
+        "title": "Part V",
+        "content": "",
+        "disabled": true
+    }]
+}

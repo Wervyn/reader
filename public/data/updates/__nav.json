@@ -1,0 +1,8 @@
+{
+    "title": "News and Updates",
+    "default": "landing.json",
+    "chapters": [{
+        "title": "(8/22/20) Welcome to This Thing",
+        "content": "updates/2020-08-22.json"
+    }]
+}

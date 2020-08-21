@@ -1,0 +1,20 @@
+{
+    "title": "Daughter of a Soldier",
+    "default": "part1/_foreword.json",
+    "chapters": [{
+        "title": "Prologue",
+        "content": "part1/_prologue.json"
+    }, {
+        "title": "A New Life",
+        "content": "part1/chapter-001.json"
+    }, {
+        "title": "Home Exploration",
+        "content": "part1/chapter-002.json"
+    }, {
+        "title": "City Exploration",
+        "content": "part1/chapter-003.json"
+    }, {
+        "title": "Books: Unobtainable",
+        "content": "part1/chapter-004.json"
+    }]
+}

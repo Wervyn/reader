@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TitleFont';
+    src: url('Fondamento-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'TextFont';
+    src: url('CrimsonText-Regular.ttf')
+}
