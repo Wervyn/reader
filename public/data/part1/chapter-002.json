@@ -14,8 +14,8 @@
         "__Hand over the books, damn it! I’ll cry, I swear I’ll cry and I don’t care what anyone thinks about it!__",
         "Given the presence of my older sister Tully, there had to be a dozen picture books stashed around the house somewhere. No doubt about it, even if I couldn’t read the letters I should be able to look at the pictures and guess at the words.",
         "“Myne, are you asleep?” Tully suddenly opened the door and poked her head in. Seeing me obediently lying in bed she nodded once in satisfaction.",
-        "When I’d first regained consciousness, I had tried to sneak out of bed and search around the house for books, but had ended up collapsing. Since then Tully had been an ever vigilant babysitter. During the day our mother had work, and so she asked Tully to look after me. She had me pinned to the bed. No matter how much I might want to escape, there was no way my tiny body was any match for her.",
-        "“One day I’ll definitely [ascend]__[1]__ out of here.”",
+        "When I’d first regained consciousness, I had tried to sneak out of bed and search around the house for books, but had ended up collapsing. Since then Tully had been an ever vigilant babysitter. During the day our mother had work, and so she asked Tully to look after me. She had me pinned to the bed.__[1]__ No matter how much I might want to escape, there was no way my tiny body was any match for her.",
+        "“One day I’ll definitely [ascend]__[2]__ out of here.”",
         "“What’s that, Myne?”",
         "“…uh, I can’t wait to grow up.”",
         "Clearly not understanding the rebellious intent behind my innocuous words, Tully gave a worried laugh. “You’ll get bigger when you’re not sick, Myne. You’ve always been sick, and you can’t eat much, so sometimes people think you’re three years old instead of five.”",
@@ -77,6 +77,7 @@
         "And, next time we’ll look for books outside. Though, speaking of despair, I can’t say I actually know from experience."
     ],
     "footnotes": [
+        "On “pinned to the bed”. The term used here is 必死 (hisshi). Usually this term is used as an adjective or adverb to mean “panicked” or “frantically”, but its literal meaning is “certain death”. And here, it’s being used as a noun. This is actually used in this capacity as a __shogi__ term referring to a “brinkmate”, a scenario where a player has an inevitable sequence of moves that will lead to checkmate. (It’s actually not quite the same as a forced checkmate, the other player can win against it if and only if they can produce a forced checkmate first.) Basically, Myne is using a __shogi__ term to explain that her movement options have been locked down, so I replaced it with a chess term that means something similar.",
         "The term 下剋上 (gekokujou), “ascendance”, is loaded with a lot more connotation about revolution and overthrowing social order in Japanese than in English, But Myne using it is clearly meant to reference the title so there’s no helping it.^"
     ]
 }
