@@ -5,14 +5,14 @@
       <h4 v-if="topnav.subtitle" class="subtitle">{{ topnav.subtitle }}</h4>
     </div></div>
     <div class="row">
-      <div class="col-sm-3 center home-link">
-        <router-link to="/reader" class="col-sm=3 justify-content-center nav-link">Home</router-link>
+      <div class="col-sm-3 center-text home-link">
+        <router-link to="/reader" class="justify-content-center nav-link">Home</router-link>
       </div>
-      <top-nav class="col-9" :books="topnav.books" :active="bookNumber" />
+      <top-nav class="col-sm-9 justify-content-center" :books="topnav.books" :active="bookNumber" />
     </div>
     <div class="row">
       <side-nav class="col-sm-3" :book="book" :bookNumber="bookNumber" :active="chapterNumber" />
-      <main-content class="col-9" :chapter="chapter" ref="mainContent" />
+      <main-content class="col-sm-9 justify-content-center" :chapter="chapter" ref="mainContent" />
     </div>
   </div>
 </template>

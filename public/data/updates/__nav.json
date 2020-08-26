@@ -1,8 +1,18 @@
 {
     "title": "News and Updates",
     "default": "landing.json",
+    "reverse": true,
     "chapters": [{
         "title": "(8/22/20) Welcome to This Thing",
         "content": "updates/2020-08-22.json"
+    }, {
+        "title": "(8/23/20) 香月美夜先生への照会",
+        "content": "updates/2020-08-23.json"
+    }, {
+        "title": "(8/25/20) Well That Was a Short Run",
+        "content": "updates/2020-08-25.json"
+    }, {
+        "title": "(8/26/20) On the Upcoming Auth Changes",
+        "content": "updates/2020-08-26.json"
     }]
 }

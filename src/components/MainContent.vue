@@ -6,7 +6,7 @@
         </h2>
         <div v-for="(line, index) in chapter.content" :key="'line'+index">
             <p v-if="!!line && line != '---'" class="text-justify">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="width:15px; overflow:hidden;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <span v-for="(substr, i) in line.split('__')" :key="'line'+index+'part'+i">
                     <a v-if="substr[0] == '[' && substr.slice(-1) == ']'" class="footnote"
                         :name="`anchor-${substr.slice(1,-1)}`" :href="`#footnote-${substr.slice(1,-1)}`">

@@ -5,8 +5,11 @@
         </router-link>
         <div class="scroll-pane">
             <ul class="nav flex-column">
-                <li class="nav-item" v-for="(chapter, index) in book.chapters" :key="'chapter'+index">
-                    <router-link :to="`/reader/${bookNumber}/${index}`" class="nav-link" :class="dynamicClass(index)">{{ book.chapters[index].title }}</router-link>
+                <li class="nav-item" v-for="index in listChapters()" :key="'chapter'+index">
+                    <router-link :to="`/reader/${bookNumber}/${index}`" class="nav-link"
+                        :class="dynamicClass(index)">
+                        {{ book.chapters[index].title }}
+                    </router-link>
                 </li>
             </ul>
         </div>
@@ -19,6 +22,11 @@ export default {
     methods: {
         dynamicClass(index) {
             return `${index == this.active ? "active" : "inactive"} ${this.book.chapters[index].disabled ? "disabled" : ""}`
+        },
+        listChapters() {
+            let range = this.book.chapters ? Array.from(this.book.chapters.keys()) : [];
+            if (this.book.reverse) range.reverse();
+            return range;
         }
     }
 }
@@ -50,9 +58,9 @@ export default {
         border-bottom-left-radius: 10px;
     }
     .inactive {
-        color: #fff
+        color: #fff;
     }
     .book-title {
-        color: #fff
+        color: #fff;
     }
 </style>
