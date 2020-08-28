@@ -43,14 +43,14 @@ export default {
           console.log("route aborted: " + to.path);
           return
         }
-        let tempfetch = await fetch(`${datapath}topnav.json`);
+        let tempfetch = await fetch(`${datapath}topnav.json`, {cache: "no-cache"});
         this.topnav = await tempfetch.json();
 
         let bookpath = `${datapath}updates/__nav.json`
         if (this.bookNumber >= 0) {
           bookpath = `${datapath}${this.topnav.books[this.bookNumber].content}`;
         }
-        tempfetch = await fetch(bookpath);
+        tempfetch = await fetch(bookpath, {cache: "no-cache"});
         this.book = await tempfetch.json();
 
         let chapterpath = `${datapath}landing.json`;
@@ -59,7 +59,7 @@ export default {
         } else {
           chapterpath = `${datapath}${this.book.chapters[this.chapterNumber].content}`;
         }
-        tempfetch = await fetch(chapterpath);
+        tempfetch = await fetch(chapterpath, {cache: "no-cache"});
         this.chapter = await tempfetch.json();
         this.$refs.mainContent.$el.scrollTop = 0;
     }
@@ -72,14 +72,14 @@ export default {
     });
 
     onMounted(async () => {
-        let tempfetch = await fetch(`${datapath}topnav.json`);
+        let tempfetch = await fetch(`${datapath}topnav.json`, {cache: "no-cache"});
         data.topnav = await tempfetch.json();
 
         let bookpath = `${datapath}updates/__nav.json`
         if (props.bookNumber >= 0) {
           bookpath = `${datapath}${data.topnav.books[props.bookNumber].content}`;
         }
-        tempfetch = await fetch(bookpath);
+        tempfetch = await fetch(bookpath, {cache: "no-cache"});
         data.book = await tempfetch.json();
 
         let chapterpath = `${datapath}landing.json`;
@@ -88,7 +88,7 @@ export default {
         } else {
           chapterpath = `${datapath}${data.book.chapters[props.chapterNumber].content}`;
         }
-        tempfetch = await fetch(chapterpath);
+        tempfetch = await fetch(chapterpath, {cache: "no-cache"});
         data.chapter = await tempfetch.json();
     });
 
