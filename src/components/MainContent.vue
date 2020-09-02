@@ -65,7 +65,8 @@ export default {
 <style scoped>
     .container {
         padding-top: 10px;
-        max-height: 80vh;
+        min-height: 100%;
+        max-height: 100%;
         overflow-y: scroll;
         font-family: 'TextFont', Times, sans-serif;
         font-size: 14pt;

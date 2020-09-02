@@ -38,10 +38,12 @@ export default {
         padding-top: 10px;
         color: #fff;
         border-bottom-left-radius: 30px;
+        min-height: 100%;
+        max-height: 100%;
     }
     .scroll-pane {
         margin-right: -15px;
-        max-height: 70vh;
+        max-height: 65vh;
         overflow-x: hidden;
         overflow-y: scroll;
         scrollbar-width: none; /* Firefox */
