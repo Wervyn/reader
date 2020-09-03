@@ -38,6 +38,7 @@ export default {
         padding-top: 10px;
         color: #fff;
         border-bottom-left-radius: 30px;
+        height: 100%;
         min-height: 100%;
         max-height: 100%;
     }

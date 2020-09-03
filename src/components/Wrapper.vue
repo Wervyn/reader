@@ -10,7 +10,7 @@
       </div>
       <top-nav class="col-sm-9 justify-content-center" :books="topnav.books" :active="bookNumber" />
     </div>
-    <div class="row d-flex main-flex">
+    <div class="row main-flex">
       <side-nav class="col-sm-3" :book="book" :bookNumber="bookNumber" :active="chapterNumber" />
       <main-content class="col-sm-9 justify-content-center" :chapter="chapter" ref="mainContent" />
     </div>
@@ -141,6 +141,8 @@ export default {
   font-size: 20px;
 }
 .main-flex {
+  height: 80vh;
   max-height: 80vh;
+  display: flex;
 }
 </style>
