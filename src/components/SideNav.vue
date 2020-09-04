@@ -1,9 +1,9 @@
 <template>
     <div class="container justify-content-left">
-        <router-link :to="`/reader/${bookNumber}`" class="book-title nav-link">
+        <div ref="titleLonk"><router-link :to="`/reader/${bookNumber}`" class="book-title nav-link" ref="titleLink">
             <h3>{{ book.title }}</h3>
-        </router-link>
-        <div class="scroll-pane">
+        </router-link></div>
+        <div class="scroll-pane" :style="{'max-height': `calc(100% - 20px - ${titleHeight}px)`}">
             <ul class="nav flex-column">
                 <li class="nav-item" v-for="index in listChapters()" :key="'chapter'+index">
                     <router-link :to="`/reader/${bookNumber}/${index}`" class="nav-link"
@@ -19,6 +19,9 @@
 <script>
 export default {
     props: ['book', 'bookNumber', 'active'],
+    data() { return {
+        titleHeight: 100
+    }},
     methods: {
         dynamicClass(index) {
             return `${index == this.active ? "active" : "inactive"} ${this.book.chapters[index].disabled ? "disabled" : ""}`
@@ -27,7 +30,17 @@ export default {
             let range = this.book.chapters ? Array.from(this.book.chapters.keys()) : [];
             if (this.book.reverse) range.reverse();
             return range;
+        },
+        setTitleHeight() {
+            this.titleHeight = this.$refs.titleLink.$el.clientHeight;
         }
+    },
+    mounted() {
+        window.addEventListener('resize', this.setTitleHeight);
+        setTimeout(this.setTitleHeight, 500);
+    },
+    beforeUnmount() {
+        window.removeEventListener('resize', this.setTitleHeight);
     }
 }
 </script>
@@ -44,7 +57,6 @@ export default {
     }
     .scroll-pane {
         margin-right: -15px;
-        max-height: 65vh;
         overflow-x: hidden;
         overflow-y: scroll;
         scrollbar-width: none; /* Firefox */

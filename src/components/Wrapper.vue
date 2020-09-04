@@ -21,7 +21,7 @@
 import { reactive, toRefs, onMounted } from 'vue'
 
 import TopNav from './TopNav.vue'
-import SideNav from './SideNav'
+import SideNav from './SideNav.vue'
 import MainContent from './MainContent.vue'
 
 let datapath = "/wervyn/honzuki/data/";
