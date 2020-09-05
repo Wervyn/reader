@@ -1,16 +1,18 @@
 <template>
   <div class="container" id="app">
-    <div class="top-bar row justify-content-center"><div class="col">
-      <h1 v-if="topnav.title" class="title">{{ topnav.title }}</h1>
-      <h4 v-if="topnav.subtitle" class="subtitle">{{ topnav.subtitle }}</h4>
-    </div></div>
-    <div class="row">
-      <div class="col-sm-3 center-text home-link">
-        <router-link to="/reader" class="justify-content-center nav-link">Home</router-link>
+    <div ref="topBar">
+      <div class="top-bar row justify-content-center"><div class="col">
+        <h1 v-if="topnav.title" class="title">{{ topnav.title }}</h1>
+        <h4 v-if="topnav.subtitle" class="subtitle">{{ topnav.subtitle }}</h4>
+      </div></div>
+      <div class="row">
+        <div class="col-sm-3 center-text home-link">
+          <router-link to="/reader" class="justify-content-center nav-link">Home</router-link>
+        </div>
+        <top-nav class="col-sm-9 justify-content-center" :books="topnav.books" :active="bookNumber" />
       </div>
-      <top-nav class="col-sm-9 justify-content-center" :books="topnav.books" :active="bookNumber" />
     </div>
-    <div class="row main-flex">
+    <div class="row main-flex" :style="{'max-height': `calc(100vh - ${finalTopHeight})`, 'height': `calc(100vh - ${finalTopHeight})`}">
       <side-nav class="col-sm-3" :book="book" :bookNumber="bookNumber" :active="chapterNumber" />
       <main-content class="col-sm-9 justify-content-center" :chapter="chapter" ref="mainContent" />
     </div>
@@ -18,7 +20,7 @@
 </template>
 
 <script>
-import { reactive, toRefs, onMounted } from 'vue'
+import { reactive, ref, toRefs, onMounted, onBeforeUnmount } from 'vue'
 
 import TopNav from './TopNav.vue'
 import SideNav from './SideNav.vue'
@@ -36,6 +38,14 @@ export default {
     TopNav,
     SideNav,
     MainContent
+  },
+  methods: {
+
+  },
+  computed: {
+    finalTopHeight() {
+      return this.topHeight ? this.topHeight + 'px' : '25vh'
+    }
   },
   watch: {
     '$route': async function (to, from) {
@@ -68,10 +78,20 @@ export default {
     const data = reactive({
       topnav: {},
       book: {},
-      chapter: {}
+      chapter: {},
+      topHeight: 0
     });
 
+    const topBar = ref(null);
+
+    function setTopHeight() {
+      data.topHeight = topBar.value ? topBar.value.clientHeight : 0;
+    }
+
     onMounted(async () => {
+        window.addEventListener('resize', setTopHeight);
+        setTimeout(setTopHeight, 500); 
+
         let tempfetch = await fetch(`${datapath}topnav.json`, {cache: "no-cache"});
         data.topnav = await tempfetch.json();
 
@@ -92,7 +112,11 @@ export default {
         data.chapter = await tempfetch.json();
     });
 
-    return {...toRefs(data)};
+    onBeforeUnmount(() => {
+        window.removeEventListener('resize', setTopHeight);
+    });
+
+    return {...toRefs(data), topBar};
   }
 }
 </script>
@@ -141,8 +165,7 @@ export default {
   font-size: 20px;
 }
 .main-flex {
-  height: 80vh;
-  max-height: 80vh;
+  min-height: 75vh;
   display: flex;
 }
 </style>

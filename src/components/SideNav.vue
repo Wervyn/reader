@@ -1,6 +1,6 @@
 <template>
     <div class="container justify-content-left">
-        <div ref="titleLonk"><router-link :to="`/reader/${bookNumber}`" class="book-title nav-link" ref="titleLink">
+        <div><router-link :to="`/reader/${bookNumber}`" class="book-title nav-link" ref="titleLink">
             <h3>{{ book.title }}</h3>
         </router-link></div>
         <div class="scroll-pane" :style="{'max-height': `calc(100% - 20px - ${titleHeight}px)`}">
