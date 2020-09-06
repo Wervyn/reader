@@ -15,6 +15,8 @@
                     <a v-else-if="substr[0] == '<' && substr.slice(-1) == '>'" :href="substr.slice(1,-1).split('|')[0]" target="_blank">
                         {{ substr.slice(1,-1).split('|')[1] }}
                     </a>
+                    <a v-else-if="substr.slice(0,2) == '**' && substr.slice(-2) == '**'" style="font-style: italic; font-weight: bold;">{{ substr.slice(2, -2) }}</a>
+                    <a v-else-if="substr[0] == '*' && substr.slice(-1) == '*'" style="font-weight: bold;">{{ substr.slice(1, -1) }}</a>
                     <a v-else :style="{'font-style': i%2 ? 'italic' : 'normal'}">{{ substr }}</a>
                 </span>
             </p>
@@ -44,6 +46,8 @@
                     <a v-if="substr[0] == '<' && substr.slice(-1) == '>'" :href="substr.slice(1,-1).split('|')[0]" target="_blank">
                         {{ substr.slice(1,-1).split('|')[1] }}
                     </a>
+                    <a v-else-if="substr.slice(0,2) == '**' && substr.slice(-2) == '**'" style="font-style: italic; font-weight: bold;">{{ substr.slice(2, -2) }}</a>
+                    <a v-else-if="substr[0] == '*' && substr.slice(-1) == '*'" style="font-weight: bold;">{{ substr.slice(1, -1) }}</a>
                     <a v-else :style="{'font-style': i%2 ? 'italic' : 'normal'}">{{ substr }}</a>
                 </span>
             </p>
@@ -76,6 +80,8 @@ export default {
     }
     .footnote {
         font-size: 10pt;
+        font-style: italic;
+        font-weight: bold;
     }
     .image-embed {
         width: auto;
