@@ -80,7 +80,6 @@ export default {
     }
     .footnote {
         font-size: 10pt;
-        font-style: italic;
         font-weight: bold;
     }
     .image-embed {
