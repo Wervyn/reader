@@ -8,9 +8,9 @@
             <p v-if="!!line && line != '---' && line.slice(0,4) != 'img='" class="text-justify">
                 <span class="width:15px; overflow:hidden;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <span v-for="(substr, i) in line.split('__')" :key="'line'+index+'part'+i">
-                    <a v-if="substr[0] == '[' && substr.slice(-1) == ']'" class="footnote"
-                        :name="`anchor-${substr.slice(1,-1)}`" :href="`#footnote-${substr.slice(1,-1)}`">
-                            [{{ substr.slice(1,-1) }}]
+                    <a v-if="substr == '*'" class="footnote"
+                        :name="`anchor-${anchor(index, i)}`" :href="`#footnote-${anchor(index, i)}`">
+                            [{{ anchor(index, i) }}]
                     </a>
                     <a v-else-if="substr[0] == '<' && substr.slice(-1) == '>'" :href="substr.slice(1,-1).split('|')[0]" target="_blank">
                         {{ substr.slice(1,-1).split('|')[1] }}
@@ -41,7 +41,7 @@
         <h5 v-if="chapter.footnotes" style="font-style: italic;">Translator's Note:</h5>
         <div v-for="(line, index) in chapter.footnotes" :key="'footnote'+index">
             <p v-if="!!line && line != '---' && line.slice(0,4) != 'img='" class="text-justify">
-                <a v-if="line.slice(-1) == '^'" class="footnote" :name="`footnote-${index+1}`" :href="`#anchor-${index+1}`">[{{ index + 1 }}]</a>
+                <a v-if="line.slice(-1) == '^'" class="footnote" :name="`footnote-${footnote(index)}`" :href="`#anchor-${footnote(index)}`">[{{ footnote(index) }}]&nbsp;</a>
                 <span v-for="(substr, i) in line.slice(0,-1).split('__')" :key="'footnote'+index+'part'+i">
                     <a v-if="substr[0] == '<' && substr.slice(-1) == '>'" :href="substr.slice(1,-1).split('|')[0]" target="_blank">
                         {{ substr.slice(1,-1).split('|')[1] }}
@@ -62,6 +62,30 @@
 export default {
     props: {
         chapter: Object
+    },
+    created() {
+        this.anchorDict = {},
+        this.footnoteDict = {};
+    },
+    watch: {
+        'chapter': function() {
+            this.anchorDict = {},
+            this.footnoteDict = {}
+        }
+    },
+    methods: {
+        anchor(index, pos) {
+            if (!this.anchorDict[index*1000+pos]) {
+                this.anchorDict[index*1000+pos] = Object.keys(this.anchorDict).length + 1;
+            }
+            return this.anchorDict[index*1000+pos];
+        },
+        footnote(index) {
+            if (!this.footnoteDict[index]) {
+                this.footnoteDict[index] = Object.keys(this.footnoteDict).length + 1;
+            }
+            return this.footnoteDict[index];
+        }
     }
 }
 </script>
