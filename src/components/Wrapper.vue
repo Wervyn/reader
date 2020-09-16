@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="row main-flex" :style="{'max-height': `calc(100vh - ${finalTopHeight})`, 'height': `calc(100vh - ${finalTopHeight})`}">
-      <side-nav class="col-sm-3" :book="book" :bookNumber="bookNumber" :active="chapterNumber" />
+      <side-nav class="col-sm-3" :book="book" :bookNumber="bookNumber" :active="chapterNumber" ref="sideNav" />
       <main-content class="col-sm-9 justify-content-center" :chapter="chapter" ref="mainContent" />
     </div>
   </div>
@@ -72,6 +72,7 @@ export default {
         tempfetch = await fetch(chapterpath, {cache: "no-cache"});
         this.chapter = await tempfetch.json();
         this.$refs.mainContent.$el.scrollTop = 0;
+        this.$refs.sideNav.scrollTo(this.chapterNumber);
     }
   },
   setup(props) {

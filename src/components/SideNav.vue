@@ -3,15 +3,16 @@
         <div><router-link :to="`/reader/${bookNumber}`" class="book-title nav-link" ref="titleLink">
             <h3>{{ book.title }}</h3>
         </router-link></div>
-        <div class="scroll-pane" :style="{'max-height': `calc(100% - 20px - ${titleHeight}px)`}">
+        <div class="scroll-pane" :style="{'max-height': `calc(100% - 20px - ${titleHeight}px)`}" ref="sidebarContent" @scroll="setScroll()">
             <ul class="nav flex-column">
                 <li class="nav-item" v-for="index in listChapters()" :key="'chapter'+index">
-                    <router-link :to="`/reader/${bookNumber}/${index}`" class="nav-link"
+                    <router-link :id="'chapter-'+index" :to="`/reader/${bookNumber}/${index}`" class="nav-link"
                         :class="dynamicClass(index)">
                         {{ book.chapters[index].title }}
                     </router-link>
                 </li>
             </ul>
+            <div class="scrollbar" :style="dynamicScrollbar()"></div>
         </div>
     </div>
 </template>
@@ -20,7 +21,10 @@
 export default {
     props: ['book', 'bookNumber', 'active'],
     data() { return {
-        titleHeight: 100
+        titleHeight: 100,
+        offsetHeight: 600,
+        scrollHeight: 600,
+        scrollTop: 0,
     }},
     methods: {
         dynamicClass(index) {
@@ -32,7 +36,31 @@ export default {
             return range;
         },
         setTitleHeight() {
-            this.titleHeight = this.$refs.titleLink.$el.clientHeight;
+            this.titleHeight = this.$refs.titleLink.$el.offsetHeight;
+            this.setScroll();
+        },
+        setScroll() {
+            this.offsetHeight = this.$refs.sidebarContent.offsetHeight;
+            this.scrollHeight = this.$refs.sidebarContent.scrollHeight;
+            this.scrollTop = this.$refs.sidebarContent.scrollTop;
+        },
+        scrollTo(index) {
+            this.setScroll();
+            var el = document.querySelector(`#chapter-${index}`);
+            el.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+                inline: 'center'
+            });
+        },
+        dynamicScrollbar() {
+            if (this.offsetHeight >= this.scrollHeight) {
+                return {'display': 'none'};
+            }
+            return {
+                'height': `${Math.trunc(this.offsetHeight * this.offsetHeight / this.scrollHeight)}px`,
+                'top': `${Math.trunc(this.titleHeight + this.scrollTop * this.offsetHeight / this.scrollHeight + 10)}px`
+            };
         }
     },
     mounted() {
@@ -77,5 +105,14 @@ export default {
     }
     .book-title {
         color: #fff;
+    }
+    .scrollbar {
+        position: absolute;
+        left: 10px;
+        z-index: 5;
+        background-color: #8df;
+        opacity: .5;
+        width: 10px;
+        border-radius: 5px;
     }
 </style>
