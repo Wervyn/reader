@@ -46,11 +46,13 @@ export default {
         },
         scrollTo(index) {
             this.setScroll();
+            console.log("window width: " + window.innerWidth);
+            if (window.innerWidth <= 575) return;
+            console.log("scrolling...");
             var el = document.querySelector(`#chapter-${index}`);
             el.scrollIntoView({
                 behavior: 'smooth',
-                block: 'center',
-                inline: 'center'
+                block: 'center'
             });
         },
         dynamicScrollbar() {
