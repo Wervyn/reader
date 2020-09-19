@@ -77,7 +77,7 @@ export default {
         this.footnoteDict = {};
     },
     watch: {
-        'chapter': function() {
+        'chapterNumber': function() {
             this.anchorDict = {},
             this.footnoteDict = {}
         }
