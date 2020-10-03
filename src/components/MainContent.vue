@@ -1,6 +1,8 @@
 <template>
     <div class="container">
         <div class="main-content" ref="mainPanel">
+            <vue-audio v-if="chapter.audio" :file="`/wervyn/honzuki/data/${chapter.audio}`" />
+            <br v-if="chapter.audio" />
             <h2 class="justify-content-center">
                 <a v-if="chapter.titlelink" :href="chapter.titlelink" target="_blank">{{ chapter.title }}</a>
                 <a v-else>{{ chapter.title }}</a>
@@ -63,9 +65,10 @@
 
 <script>
 import FooterNav from './FooterNav.vue'
+import VueAudio from 'vue-audio'
 
 export default {
-    components: { FooterNav },
+    components: { FooterNav, VueAudio },
     props: {
         chapter: Object,
         bookNumber: Number,

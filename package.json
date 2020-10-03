@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
     "vue": "^3.0.0-0",
+    "vue-audio": "0.0.12",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
