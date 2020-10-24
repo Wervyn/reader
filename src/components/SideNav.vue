@@ -28,7 +28,9 @@ export default {
     }},
     methods: {
         dynamicClass(index) {
-            return `${index == this.active ? "active" : "inactive"} ${this.book.chapters[index].disabled ? "disabled" : ""}`
+            return `${index == this.active ? "active" : "inactive"} 
+                    ${this.book.chapters[index].disabled ? "disabled" : ""} 
+                    ${localStorage.getItem("isDark") ? "dark" : ""}`
         },
         listChapters() {
             let range = this.book.chapters ? Array.from(this.book.chapters.keys()) : [];
@@ -46,9 +48,7 @@ export default {
         },
         scrollTo(index) {
             this.setScroll();
-            console.log("window width: " + window.innerWidth);
             if (window.innerWidth <= 575) return;
-            console.log("scrolling...");
             var el = document.querySelector(`#chapter-${index}`);
             el.scrollIntoView({
                 behavior: 'smooth',
@@ -101,6 +101,11 @@ export default {
         color: #22b;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+    }
+    .active.dark {
+        background-color: #333;
+        color: #fff;
+        /*color: #be9d3c;*/
     }
     .inactive {
         color: #fff;

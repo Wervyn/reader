@@ -53,5 +53,20 @@
     }, {
         "title": "(10/3/20) Now in Dolby 5.1",
         "content": "updates/2020-10-03a.json"
+    }, {
+        "title": "(10/9/20) Bursting at the Seams",
+        "content": "updates/2020-10-09.json"
+    }, {
+        "title": "(10/10/20) The Gang’s All Here",
+        "content": "updates/2020-10-10.json"
+    }, {
+        "title": "(10/17/20) Things Are Heating Up",
+        "content": "updates/2020-10-17.json"
+    }, {
+        "title": "(10/22/20) A Little Easier on the Eyes",
+        "content": "updates/2020-10-22.json"
+    }, {
+        "title": "(10/24/20) How the Other Half Lives",
+        "content": "updates/2020-10-24.json"
     }]
 }

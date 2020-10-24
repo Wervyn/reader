@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="main-content" ref="mainPanel">
+        <div class="main-content" :class="isDark()" ref="mainPanel">
             <vue-audio v-if="chapter.audio" :file="`/wervyn/honzuki/data/${chapter.audio}`" />
             <br v-if="chapter.audio" />
             <h2 class="justify-content-center">
@@ -98,6 +98,9 @@ export default {
             }
             return this.footnoteDict[index];
         },
+        isDark() {
+            return localStorage.getItem("isDark") ? "dark" : "";
+        },
         scrollToTop() {
             this.$refs.mainPanel.scrollTop = 0;
         }
@@ -122,6 +125,10 @@ export default {
     }
     .main-content > h2 {
         font-family: 'TitleFont', Times, sans-serif;
+    }
+    .main-content.dark {
+        background-color: #333;
+        color: #ccc;
     }
     .footer-nav {
         height: 40px;

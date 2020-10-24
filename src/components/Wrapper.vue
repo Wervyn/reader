@@ -4,6 +4,7 @@
       <div class="top-bar row justify-content-center"><div class="col">
         <h1 v-if="topnav.title" class="title">{{ topnav.title }}</h1>
         <h4 v-if="topnav.subtitle" class="subtitle">{{ topnav.subtitle }}</h4>
+        <div class="darkButton" @click="toggleDarkMode()">{{ isDark() ? "Light Mode" : "Dark Mode" }}</div>
       </div></div>
       <div class="row">
         <div class="col-sm-3 center-text home-link">
@@ -13,9 +14,9 @@
       </div>
     </div>
     <div class="row main-flex" :style="{'max-height': `calc(100vh - ${finalTopHeight})`, 'height': `calc(100vh - ${finalTopHeight})`}">
-      <side-nav class="col-sm-3" :book="book" :bookNumber="bookNumber" :active="chapterNumber" ref="sideNav" />
+      <side-nav class="col-sm-3" :book="book" :bookNumber="bookNumber" :active="chapterNumber" ref="sideNav" :key="rerender" />
       <main-content class="col-sm-9 justify-content-center" :chapter="chapter" :chapterNumber="+chapterNumber"
-        :bookNumber="+bookNumber" :totalChapters="book?.chapters?.length ?? 1" ref="mainContent" />
+        :bookNumber="+bookNumber" :totalChapters="book?.chapters?.length ?? 1" ref="mainContent" :key="rerender" />
     </div>
   </div>
 </template>
@@ -43,6 +44,21 @@ export default {
   computed: {
     finalTopHeight() {
       return this.topHeight ? this.topHeight + 'px' : '25vh'
+    }
+  },
+  methods: {
+    isDark() {
+      return localStorage.getItem("isDark") ? true : false;
+    },
+    toggleDarkMode() {
+      if (this.isDark()) {
+        localStorage.removeItem("isDark");
+        document.body.className = "";
+      } else {
+        localStorage.setItem("isDark", "true");
+        document.body.className = "dark";
+      }
+      this.rerender++;
     }
   },
   watch: {
@@ -78,7 +94,8 @@ export default {
       topnav: {},
       book: {},
       chapter: {},
-      topHeight: 0
+      topHeight: 0,
+      rerender: 0
     });
 
     const topBar = ref(null);
@@ -89,7 +106,8 @@ export default {
 
     onMounted(async () => {
         window.addEventListener('resize', setTopHeight);
-        setTimeout(setTopHeight, 500); 
+        setTimeout(setTopHeight, 500);
+        document.body.className = localStorage.getItem("isDark") ? "dark" : "";
 
         let tempfetch = await fetch(`${datapath}topnav.json`, {cache: "no-cache"});
         data.topnav = await tempfetch.json();
@@ -121,6 +139,9 @@ export default {
 </script>
 
 <style>
+body.dark {
+  background-color: #333;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -166,5 +187,22 @@ export default {
 .main-flex {
   min-height: 75vh;
   display: flex;
+}
+
+.darkButton {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #22b;
+  color: #fff;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 575px) {
+  .main-flex {
+    min-height: 90vh;
+  }
 }
 </style>
