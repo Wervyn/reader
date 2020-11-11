@@ -1,7 +1,7 @@
 {
     "title": "City Exploration",
     "titlelink": "https://ncode.syosetu.com/n4830bu/4/",
-    "audio": "media/part1/chapter-003.mp3",
+    "audio": "media/part1/audio/chapter-003.mp3",
     "content": [
         "Yesterday I couldn’t stop crying. Even when I was called to dinner, or scolded for putting my parents’ bedding on the floor, I couldn’t muster any response but bursting into tears. And so this morning, I’d cried so much my eyes were hot and swollen, and my head throbbed painfully.",
         "But my fever had completely subsided, and I didn’t feel sluggish at all anymore. And having cried my eyes out, my mood had actually somewhat improved. Although at breakfast, my family was treating me extra sensitively.",
@@ -45,7 +45,7 @@
         "“Ah, is that a castle?”",
         "“That’s the temple, Myne. When you turn seven you’ll go there to be baptized.”",
         "__Ahh, the temple. Riiight…__ I wasn’t too keen on the idea of compulsory religion. I resolved to stay as far away from it as possible. As a Japanese person, I’d ended up distancing myself from any religious affiliation. That was then, but I didn’t know how that might be received in this world, so I held my peace and looked at the walls I could see beyond the temple gates. “Mom, what about those walls?”",
-        "“That’s the inner wall. Inside those are the duke’s__*__ castle and the nobles’ estates. Well, that doesn’t really have anything to do with us though, right?”",
+        "“That’s the inner wall. Inside those are the Duke’s__*__ castle and the nobles’ estates. Well, that doesn’t really have anything to do with us though, right?”",
         "“Hmm.” Rather than a castle, seeing nothing but the high stone walls reminded me more of a prison. It looked like it had been fortified to protect against something. Thinking of a western-style castle, I would have expected something more extravagant. __Ah, though I guess, castles in medieval Europe would have been used as fortresses.__",
         "“Then, what about that wall?”",
         "“That’s the outer wall, it protects the city. If you go straight down this street to the gate, that’s where your father works, right?”",
@@ -77,6 +77,6 @@
     ],
     "footnotes": [
         "Notably revised in the light novel, in that version Myne is carried to the market instead of walking there herself. As she is now she wouldn’t actually have the stamina to make it anywhere close to the market under her own power.^",
-        "On the “duke”, I came back and revised to this title for now. Originally I thought to correct J-Novel just calling him a Lord in the first book before they settled on the title of archduke later, and use that term. But on later reflection, I wondered if “archduke” was actually appropriate. That implies a duke above dukes, to me, which doesn’t actually seem to be the case later on. J-Novel describes all of the rulers of neighboring duchies as “archdukes”, which in effect makes the distinction of the title pointless. So, I’ve demoted him for now until there is a reason to justify his arch-ness.^"
+        "On the “Duke”, I came back and revised to this title for now. Originally I thought to correct J-Novel just calling him a Lord in the first book before they settled on the title of archduke later, and use that term. But on later reflection, I wondered if “archduke” was actually appropriate. That implies a duke above dukes, to me, which doesn’t actually seem to be the case later on. J-Novel describes all of the rulers of neighboring duchies as “archdukes”, which in effect makes the distinction of the title pointless. So, I’ve demoted him for now until there is a reason to justify his arch-ness.^"
     ]
 }

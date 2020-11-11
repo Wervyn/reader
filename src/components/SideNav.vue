@@ -3,7 +3,7 @@
         <div><router-link :to="`/reader/${bookNumber}`" class="book-title nav-link" ref="titleLink">
             <h3>{{ book.title }}</h3>
         </router-link></div>
-        <div class="scroll-pane" :style="{'max-height': `calc(100% - 20px - ${titleHeight}px)`}" ref="sidebarContent" @scroll="setScroll()">
+        <div class="scroll-pane" :style="{'max-height': `calc(100% - 40px - ${titleHeight}px)`}" ref="sidebarContent" @scroll="setScroll()">
             <ul class="nav flex-column">
                 <li class="nav-item" v-for="index in listChapters()" :key="'chapter'+index">
                     <router-link :id="'chapter-'+index" :to="`/reader/${bookNumber}/${index}`" class="nav-link"
@@ -77,7 +77,7 @@ export default {
 
 <style scoped>
     .container {
-        background-color: #22b;
+        background-color: #44c;
         padding-top: 10px;
         color: #fff;
         border-bottom-left-radius: 30px;
@@ -86,7 +86,10 @@ export default {
         max-height: 100%;
     }
     .scroll-pane {
+        background-color: #22b;
         margin-right: -15px;
+        margin-left: -15px;
+        padding-left: 15px;
         overflow-x: hidden;
         overflow-y: scroll;
         scrollbar-width: none; /* Firefox */
@@ -105,7 +108,6 @@ export default {
     .active.dark {
         background-color: #333;
         color: #fff;
-        /*color: #be9d3c;*/
     }
     .inactive {
         color: #fff;

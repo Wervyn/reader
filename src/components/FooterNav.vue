@@ -1,6 +1,9 @@
 <template>
     <div class="container">
         <ul class="nav nav-fill justify-content-center">
+            <li class="nav-item chapter-count">
+                {{ index+1 }} / {{ max+1 }}
+            </li>
             <li class="nav-item">
                 <router-link :to="`/reader/${book}/0`" class="nav-link" :class="lowerBound()">▌◀</router-link>
             </li>
@@ -12,7 +15,7 @@
             </li>
             <li class="nav-item">
                 <router-link :to="`/reader/${book}/${max}`" class="nav-link" :class="upperBound()">▶▐</router-link>
-            </li>                        
+            </li>
         </ul>
     </div>
 </template>
@@ -42,5 +45,14 @@ export default {
     }
     .disabled {
         color: #777;
+    }
+    .chapter-count {
+        color: #fff;
+        background-color: #44c;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        font-weight: bold;
     }
 </style>

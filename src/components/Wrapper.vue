@@ -198,6 +198,10 @@ body.dark {
   background-color: #22b;
   color: #fff;
   padding: 10px;
+  opacity: 0.5;
+}
+.darkButton:hover {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 575px) {

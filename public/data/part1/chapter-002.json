@@ -1,7 +1,7 @@
 {
     "title": "Home Exploration",
     "titlelink": "https://ncode.syosetu.com/n4830bu/3/",
-    "audio": "media/part1/chapter-002.mp3",
+    "audio": "media/part1/audio/chapter-002.mp3",
     "content": [
         "After three days, my fever slowly went down and I could finally begin to swallow solid food. The food was just finely minced vegetables in a fairly bland salt broth, but that was fine for a sick person – if I was going to get better I couldn’t be picky. And over that time, I’d become more comfortable being called Myne. I would have to live as her from now on, so the sooner I got used to that the better.",
         "“Myne, are you finished?”",
@@ -38,7 +38,7 @@
         "“Tch, too high…” The primary obstacle to this home exploration was the bedroom door. Standing on tiptoe I could just barely reach the knob, but found it unexpectedly difficult to turn. I looked around the room for something I could stand on, and my eyes landed on the wooden boxes full of clothes.",
         "“Urrrgh…” If I were an adult I could probably move the boxes without any trouble, but with my tiny child hands they wouldn’t budge no matter how much I pushed or pulled. I thought about overturning one of the baskets full of toys, but even with my weight I’d probably just put my foot through it. “I really need to hurry up and grow, there are just way too many things I can’t do.”",
         "After looking around the bedroom and considering various options, I settled on balling up my parents’ bedding to use as a makeshift platform. I definitely wasn’t going to use my own bedding to stand on, but my parents were used to living in this filth so it shouldn’t be a problem to use theirs. Surely. If I could get my hands on some books, a little scolding from my parents wouldn’t be that big of a deal.",
-        "“Here we go…” Standing on tiptoe on top of the balled-up bedding and throwing my whole weight against it, I somehow managed to turn the doorknob. The door opened with a click. Inward.",
+        "“Here we go…” Standing on tiptoe on top of the balled-up bedding and throwing my whole weight against it, I somehow managed to turn the doorknob.__*__ The door opened with a click. Inward.",
         "“Wha?!” Seeing the door coming toward me with enough force to hit me in the head, I frantically let go, and found myself careening backward. “Waaaa!”",
         "__Bubububump!__ I tumbled off the bedding and banged my head. “Owwww…”",
         "I raised my body while cradling my head, and saw that the door had opened a little. This pain was a well-earned battle scar. “Yes, it’s open!”",
@@ -79,6 +79,8 @@
     ],
     "footnotes": [
         "On “pinned to the bed”. The term used here is 必死 (hisshi). Usually this term is used as an adjective or adverb to mean “panicked” or “frantically”, but its literal meaning is “certain death”. And here, it’s being used as a noun. This is actually used in this capacity as a __shogi__ term referring to a “brinkmate”, a scenario where a player has an inevitable sequence of moves that will lead to checkmate. (It’s actually not quite the same as a forced checkmate, the other player can win against it if and only if they can produce a forced checkmate first.) Basically, Myne is using a __shogi__ term to explain that her movement options have been locked down, so I replaced it with a chess term that means something similar.^",
-        "The term 下剋上 (gekokujou), “ascendance”, is loaded with a lot more connotation about revolution and overthrowing social order in Japanese than in English, But Myne using it is clearly meant to reference the title so there’s no helping it.^"
+        "The term 下剋上 (gekokujou), “ascendance”, is loaded with a lot more connotation about revolution and overthrowing social order in Japanese than in English, But Myne using it is clearly meant to reference the title so there’s no helping it.^",
+        "Standing on tiptoe on top of the balled-up bedding and throwing my whole weight against it, I somehow managed to turn the doorknob.^",
+        "img=/wervyn/honzuki/data/media/part1/images/chapter-002.png"
     ]
 }
