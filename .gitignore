@@ -5,6 +5,7 @@ node_modules
 !/public/data/part1/__nav.json
 !/public/data/part1/_foreword.json
 !/public/data/part1/_prologue.json
+!/pulbic/data/part1/chapter-000.json
 !/public/data/part1/chapter-001.json
 !/public/data/part1/chapter-002.json
 !/public/data/part1/chapter-003.json
@@ -13,6 +14,10 @@ node_modules
 !/public/data/updates/2020-08-22.json
 !/public/data/landing.json
 !/public/data/topnav.json
+!/public/data/forbidden.json
+!/public/data/part1-foreword.json
+!/public/data/part1-nav.json
+!/public/data/updates-nav.json
 # local env files
 .env.local
 .env.*.local

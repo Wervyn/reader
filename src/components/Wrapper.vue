@@ -70,7 +70,7 @@ export default {
         let tempfetch = await fetch(`${datapath}topnav.json`, {cache: "no-cache"});
         this.topnav = await tempfetch.json();
 
-        let bookpath = `${datapath}updates/__nav.json`
+        let bookpath = `${datapath}updates-nav.json`
         if (this.bookNumber >= 0) {
           bookpath = `${datapath}${this.topnav.books[this.bookNumber].content}`;
         }
@@ -81,12 +81,19 @@ export default {
         if (this.chapterNumber < 0) {
           if (this.book.default) chapterpath = `${datapath}${this.book.default}`;
         } else {
-          chapterpath = `${datapath}${this.book.chapters[this.chapterNumber].content}`;
+          chapterpath = `${datapath}${this.book.dir ? this.book.dir + '/' : ''}${this.book.chapters[this.chapterNumber].content}`;
         }
-        tempfetch = await fetch(chapterpath, {cache: "no-cache"});
-        this.chapter = await tempfetch.json();
-        this.$refs.mainContent.scrollToTop();
-        this.$refs.sideNav.scrollTo(this.chapterNumber);
+        tempfetch = await fetch(chapterpath, {cache: "no-cache"})
+          .then(async response => {
+            if (response.status === 401) {
+              tempfetch = await fetch(`${datapath}forbidden.json`);
+              this.chapter = await tempfetch.json();
+            } else {
+              this.chapter = await response.json();
+            }
+            this.$refs.mainContent.scrollToTop();
+            this.$refs.sideNav.scrollTo(this.chapterNumber);
+          });
     }
   },
   setup(props) {
@@ -112,7 +119,7 @@ export default {
         let tempfetch = await fetch(`${datapath}topnav.json`, {cache: "no-cache"});
         data.topnav = await tempfetch.json();
 
-        let bookpath = `${datapath}updates/__nav.json`
+        let bookpath = `${datapath}updates-nav.json`
         if (props.bookNumber >= 0) {
           bookpath = `${datapath}${data.topnav.books[props.bookNumber].content}`;
         }
@@ -123,10 +130,17 @@ export default {
         if (props.chapterNumber < 0) {
           if (data.book.default) chapterpath = `${datapath}${data.book.default}`;
         } else {
-          chapterpath = `${datapath}${data.book.chapters[props.chapterNumber].content}`;
+          chapterpath = `${datapath}${data.book.dir ? data.book.dir + '/' : ''}${data.book.chapters[props.chapterNumber].content}`;
         }
-        tempfetch = await fetch(chapterpath, {cache: "no-cache"});
-        data.chapter = await tempfetch.json();
+        tempfetch = await fetch(chapterpath, {cache: "no-cache"})
+          .then(async response => {
+            if (response.status === 401) {
+              tempfetch = await fetch(`${datapath}forbidden.json`);
+              data.chapter = await tempfetch.json();
+            } else {
+              data.chapter = await response.json();
+            }
+          });
     });
 
     onBeforeUnmount(() => {

@@ -144,7 +144,7 @@ export default {
         text-align: center;
     }
     .image-embed img {
+        max-height: 600px;
         max-width: 95%;
-        height: auto;
     }
 </style>

@@ -3,7 +3,7 @@
     "subtitle": "~ I would do anything to become a librarian ~",
     "books": [{
         "title": "Part I 🔒",
-        "content": "part1/__nav.json"
+        "content": "part1-nav.json"
     }, {
         "title": "Part II",
         "content": "",

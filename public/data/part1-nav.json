@@ -1,0 +1,237 @@
+{
+    "title": "Daughter of a Soldier",
+    "default": "part1-foreword.json",
+    "dir": "part1",
+    "chapters": [{
+        "title": "Prologue",
+        "content": "chapter-000.json"
+    }, {
+        "title": "A New Life",
+        "content": "chapter-001.json"
+    }, {
+        "title": "Home Exploration",
+        "content": "chapter-002.json"
+    }, {
+        "title": "City Exploration",
+        "content": "chapter-003.json"
+    }, {
+        "title": "Books: Unobtainable",
+        "content": "chapter-004.json"
+    }, {
+        "title": "Tuuli – My Weird Little Sister",
+        "content": "chapter-005.json"
+    }, {
+        "title": "Neighborhood Boys",
+        "content": "chapter-006.json"
+    }, {
+        "title": "Paper: Unobtainable",
+        "content": "chapter-007.json"
+    }, {
+        "title": "Respecting Egyptian Civilization",
+        "content": "chapter-008.json"
+    }, {
+        "title": "Winter Preparations",
+        "content": "chapter-009.json"
+    }, {
+        "title": "Slate Acquired!",
+        "content": "chapter-010.json"
+    }, {
+        "title": "Defeated by the Ancient Egyptians",
+        "content": "chapter-011.json"
+    }, {
+        "title": "Lutz – My Savior",
+        "content": "chapter-012.json"
+    }, {
+        "title": "Mr. Otto’s Assistant",
+        "content": "chapter-013.json"
+    }, {
+        "title": "Tuuli’s Hair Ornament",
+        "content": "chapter-014.json"
+    }, {
+        "title": "Take Me to the Forest",
+        "content": "chapter-015.json"
+    }, {
+        "title": "Mesopotamian Civilization, Banzai",
+        "content": "chapter-016.json"
+    }, {
+        "title": "Gunther – My Daughter the Wannabe Criminal?!",
+        "content": "chapter-017.json"
+    }, {
+        "title": "Clay Tablets Are No Good",
+        "content": "chapter-018.json"
+    }, {
+        "title": "Tuuli’s Baptism",
+        "content": "chapter-019.json"
+    }, {
+        "title": "Making Mokkan",
+        "content": "chapter-020.json"
+    }, {
+        "title": "Making Ink and the End of the Mokkan",
+        "content": "chapter-021.json"
+    }, {
+        "title": "Struggling to Cook",
+        "content": "chapter-022.json"
+    }, {
+        "title": "The Road to the Meeting",
+        "content": "chapter-023.json"
+    }, {
+        "title": "The Meeting with the Merchant",
+        "content": "chapter-024.json"
+    }, {
+        "title": "Otto – My Assistant",
+        "content": "chapter-025.json"
+    }, {
+        "title": "The Road to Washi",
+        "content": "chapter-026.json"
+    }, {
+        "title": "An Invitation to Otto’s House",
+        "content": "chapter-027.json" 
+    }, {
+        "title": "A Summons from Benno",
+        "content": "chapter-028.json"
+    }, {
+        "title": "Contract Magic",
+        "content": "chapter-029.json"
+    }, {
+        "title": "Lutz’s Most Important Duty",
+        "content": "chapter-030.json"
+    }, {
+        "title": "Ordering Materials and Tools",
+        "content": "chapter-031.json"
+    }, {
+        "title": "Papermaking Commences",
+        "content": "chapter-032.json"
+    }, {
+        "title": "Bitter Mistakes",
+        "content": "chapter-033.json"
+    }, {
+        "title": "Lutz’s Myne",
+        "content": "chapter-034.json"
+    }, {
+        "title": "Completed Paper",
+        "content": "chapter-035.json"
+    }, {
+        "title": "The Merchants’ Guild",
+        "content": "chapter-036.json"
+    }, {
+        "title": "The Guildmaster and the Hair Ornament",
+        "content": "chapter-037.json"
+    }, {
+        "title": "The Guildmaster’s Granddaughter",
+        "content": "chapter-038.json"
+    }, {
+        "title": "Frieda’s Hair Ornament",
+        "content": "chapter-039.json"
+    }, {
+        "title": "Delivering the Hair Ornament",
+        "content": "chapter-040.json"
+    }, {
+        "title": "Winter Handiwork",
+        "content": "chapter-041.json"
+    }, {
+        "title": "Lutz’s Training Curriculum",
+        "content": "chapter-042.json"
+    }, {
+        "title": "Failure and Remediation",
+        "content": "chapter-043.json"
+    }, {
+        "title": "A Trombe Appears",
+        "content": "chapter-044.json"
+    }, {
+        "title": "And So We Tried Making Some",
+        "content": "chapter-045.json"
+    }, {
+        "title": "Lutz – The Power of Money",
+        "content": "chapter-046.json"
+    }, {
+        "title": "Myne Collapses",
+        "content": "chapter-047.json"
+    }, {
+        "title": "Discussing the Devouring with Frieda",
+        "content": "chapter-048.json"
+    }, {
+        "title": "Making a Cake with Frieda",
+        "content": "chapter-049.json"
+    }, {
+        "title": "A Bath with Frieda",
+        "content": "chapter-050.json"
+    }, {
+        "title": "Frieda’s Baptism",
+        "content": "chapter-051.json"
+    }, {
+        "title": "The Beginning of Winter",
+        "content": "chapter-052.json"
+    }, {
+        "title": "Completing My Outfit and Hair Ornament",
+        "content": "chapter-053.json"
+    }, {
+        "title": "Lutz’s Private Tutor",
+        "content": "chapter-054.json"
+    }, {
+        "title": "Otto’s Guidance Counseling",
+        "content": "chapter-055.json"
+    }, {
+        "title": "Family Meeting",
+        "content": "chapter-056.json"
+    }, {
+        "title": "Reporting to Lutz",
+        "content": "chapter-057.json"
+    }, {
+        "title": "On to Resuming Papermaking",
+        "content": "chapter-058.json"
+    }, {
+        "title": "Vested Interests",
+        "content": "chapter-059.json"
+    }, {
+        "title": "The Result of the Meeting with the Vested Interests",
+        "content": "chapter-060.json"
+    }, {
+        "title": "Tools and Choosing a Workshop",
+        "content": "chapter-061.json"
+    }, {
+        "title": "Preparing for Lutz’s Apprenticeship",
+        "content": "chapter-062.json"
+    }, {
+        "title": "A Contract with Frieda",
+        "content": "chapter-063.json"
+    }, {
+        "title": "The Baptismal Procession",
+        "content": "chapter-064.json"
+    }, {
+        "title": "A Quiet Commotion",
+        "content": "chapter-065.json"
+    }, {
+        "title": "Forbidden Paradise",
+        "content": "chapter-066.json"
+    }, {
+        "title": "Opposition and Persuasion",
+        "content": "chapter-067.json"
+    }, {
+        "title": "Benno’s Sermon",
+        "content": "chapter-068.json"
+    }, {
+        "title": "Contract Magic and Studio Registration",
+        "content": "chapter-069.json"
+    }, {
+        "title": "Strategy Meeting and the Temple",
+        "content": "chapter-070.json"
+    }, {
+        "title": "The Settlement",
+        "content": "chapter-071.json"
+    }, {
+        "title": "Tuuli – A Visit with Mrs. Corinna",
+        "content": "chapter-072.json"
+    }, {
+        "title": "Ilse – Confectionary Recipes",
+        "content": "chapter-073.json"
+    }, {
+        "title": "Benno – The Pound Cake Tasting Party",
+        "content": "chapter-074.json"
+    }, {
+        "title": "Mark – The Master and I",
+        "content": "chapter-075.json"
+    }, {
+        "title": "Gunther – The Work of a Gatekeeper",
+        "content": "chapter-076.json"
+    }]
+}
