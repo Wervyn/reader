@@ -24,7 +24,7 @@ export default {
         titleHeight: 100,
         offsetHeight: 600,
         scrollHeight: 600,
-        scrollTop: 0,
+        scrollTop: 0
     }},
     methods: {
         dynamicClass(index) {
@@ -39,12 +39,13 @@ export default {
         },
         setTitleHeight() {
             this.titleHeight = this.$refs.titleLink.$el.offsetHeight;
-            this.setScroll();
+            setTimeout(this.setScroll, 50);
         },
         setScroll() {
             this.offsetHeight = this.$refs.sidebarContent.offsetHeight;
             this.scrollHeight = this.$refs.sidebarContent.scrollHeight;
             this.scrollTop = this.$refs.sidebarContent.scrollTop;
+            this.scrollbarkey++;
         },
         scrollTo(index) {
             this.setScroll();

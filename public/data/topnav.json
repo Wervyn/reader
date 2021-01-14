@@ -5,9 +5,8 @@
         "title": "Part I 🔒",
         "content": "part1-nav.json"
     }, {
-        "title": "Part II",
-        "content": "",
-        "disabled": true
+        "title": "Part II 🔒",
+        "content": "part2-nav.json"
     }, {
         "title": "Part III",
         "content": "",

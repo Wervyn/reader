@@ -92,6 +92,7 @@ export default {
               this.chapter = await response.json();
             }
             this.$refs.mainContent.scrollToTop();
+            this.$refs.sideNav.setTitleHeight();
             this.$refs.sideNav.scrollTo(this.chapterNumber);
           });
     }
