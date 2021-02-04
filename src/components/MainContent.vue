@@ -7,6 +7,9 @@
                 <a v-if="chapter.titlelink" :href="chapter.titlelink" target="_blank">{{ chapter.title }}</a>
                 <a v-else>{{ chapter.title }}</a>
             </h2>
+            <div v-if="chapter.metadata" class="info">
+                <div v-for="(value, key, index) in chapter.metadata" class="info-line" :key="'info'+index"><strong>{{ key }}:</strong> {{ value }} </div>
+            </div>
             <div v-for="(line, index) in chapter.content" :key="'line'+index">
                 <p v-if="!!line && line != '---' && line.slice(0,4) != 'img='" class="text-justify">
                     <span class="width:15px; overflow:hidden;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -120,11 +123,11 @@ export default {
         min-height: calc(100% - 40px);
         max-height: calc(100% - 40px);
         overflow-y: scroll;
-        font-family: 'TextFont', Times, sans-serif;
+        font-family: 'TextFont', Times, serif;
         font-size: 14pt;
     }
     .main-content > h2 {
-        font-family: 'TitleFont', Times, sans-serif;
+        font-family: 'TitleFont', Times, serif;
     }
     .main-content.dark {
         background-color: #333;
@@ -146,5 +149,15 @@ export default {
     .image-embed img {
         max-height: 600px;
         max-width: 95%;
+    }
+    .info {
+        text-align: right;
+        font-family: 'TextFont', Times, serif;
+        color: rgb(173, 140, 140);
+        font-size: 10pt;
+    }
+    .info-line {
+        display: inline-block;
+        padding-left: 10px;
     }
 </style>

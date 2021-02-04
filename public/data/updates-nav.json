@@ -4,94 +4,94 @@
     "dir": "updates",
     "reverse": true,
     "chapters": [{
-        "title": "(8/22/20) Welcome to This Thing",
+        "title": "(8/22/2020) Welcome to This Thing",
         "content": "2020-08-22.json"
     }, {
-        "title": "(8/23/20) 香月美夜先生への照会",
+        "title": "(8/23/2020) 香月美夜先生への照会",
         "content": "2020-08-23.json"
     }, {
-        "title": "(8/25/20) Well That Was a Short Run",
+        "title": "(8/25/2020) Well That Was a Short Run",
         "content": "2020-08-25.json"
     }, {
-        "title": "(8/26/20) On the Upcoming Auth Changes",
+        "title": "(8/26/2020) On the Upcoming Auth Changes",
         "content": "2020-08-26.json"
     }, {
-        "title": "(8/29/20) The New Normal",
+        "title": "(8/29/2020) The New Normal",
         "content": "2020-08-29.json"
     }, {
-        "title": "(9/2/20) That Sidebar Scrolls By the Way",
+        "title": "(9/2/2020) That Sidebar Scrolls By the Way",
         "content": "2020-09-02.json"
     }, {
-        "title": "(9/3/20) Cast Shot",
+        "title": "(9/3/2020) Cast Shot",
         "content": "2020-09-03.json"
     }, {
-        "title": "(9/5/20) One More in the Can",
+        "title": "(9/5/2020) One More in the Can",
         "content": "2020-09-05.json"
     }, {
-        "title": "(9/9/20) An Unexpected Bonus Chapter",
+        "title": "(9/9/2020) An Unexpected Bonus Chapter",
         "content": "2020-09-09.json"
     }, {
-        "title": "(9/11/20) Code Monkey Like You",
+        "title": "(9/11/2020) Code Monkey Like You",
         "content": "2020-09-11.json"
     }, {
-        "title": "(9/12/20) The Week in Review, and the Months Ahead",
+        "title": "(9/12/2020) The Week in Review, and the Months Ahead",
         "content": "2020-09-12.json"
     }, {
-        "title": "(9/15/20) Quality of Life Improvements",
+        "title": "(9/15/2020) Quality of Life Improvements",
         "content": "2020-09-15.json"
     }, {
-        "title": "(9/18/20) A Few Tweaks More",
+        "title": "(9/18/2020) A Few Tweaks More",
         "content": "2020-09-18.json"
     }, {
-        "title": "(9/19/20) The End of Volume One",
+        "title": "(9/19/2020) The End of Volume One",
         "content": "2020-09-19.json"
     }, {
-        "title": "(9/26/20) When the Dominos Start to Fall",
+        "title": "(9/26/2020) When the Dominos Start to Fall",
         "content": "2020-09-26.json"
     }, {
-        "title": "(10/3/20) Tension and Release",
+        "title": "(10/3/2020) Tension and Release",
         "content": "2020-10-03.json"
     }, {
-        "title": "(10/3/20) Now in Dolby 5.1",
+        "title": "(10/3/2020) Now in Dolby 5.1",
         "content": "2020-10-03a.json"
     }, {
-        "title": "(10/9/20) Bursting at the Seams",
+        "title": "(10/9/2020) Bursting at the Seams",
         "content": "2020-10-09.json"
     }, {
-        "title": "(10/10/20) The Gang’s All Here",
+        "title": "(10/10/2020) The Gang’s All Here",
         "content": "2020-10-10.json"
     }, {
-        "title": "(10/17/20) Things Are Heating Up",
+        "title": "(10/17/2020) Things Are Heating Up",
         "content": "2020-10-17.json"
     }, {
-        "title": "(10/22/20) A Little Easier on the Eyes",
+        "title": "(10/22/2020) A Little Easier on the Eyes",
         "content": "2020-10-22.json"
     }, {
-        "title": "(10/24/20) How the Other Half Lives",
+        "title": "(10/24/2020) How the Other Half Lives",
         "content": "2020-10-24.json"
     }, {
-        "title": "(10/28/20) Keep Those Suggestions Coming",
+        "title": "(10/28/2020) Keep Those Suggestions Coming",
         "content": "2020-10-28.json"
     }, {
-        "title": "(10/31/20) The Emotional Core",
+        "title": "(10/31/2020) The Emotional Core",
         "content": "2020-10-31.json"
     }, {
-        "title": "(11/4/20) An Illustrative Update",
+        "title": "(11/4/2020) An Illustrative Update",
         "content": "2020-11-04.json"
     }, {
-        "title": "(11/6/20) The End of the Middle",
+        "title": "(11/6/2020) The End of the Middle",
         "content": "2020-11-06.json"
     }, {
-        "title": "(11/14/20) Finding Religion",
+        "title": "(11/14/2020) Finding Religion",
         "content": "2020-11-14.json"
     }, {
-        "title": "(11/19/20) Milestones",
+        "title": "(11/19/2020) Milestones",
         "content": "2020-11-19.json"
     }, {
-        "title": "(11/21/20) Ohana Means Family",
+        "title": "(11/21/2020) Ohana Means Family",
         "content": "2020-11-21.json"
     }, {
-        "title": "(11/28/20) Where Do We Go from Here",
+        "title": "(11/28/2020) Where Do We Go from Here",
         "content": "2020-11-28.json"
     }, {
         "title": "(12/5/2020) The Long Winter",
@@ -114,5 +114,14 @@
     }, {
         "title": "(1/9/2021) Off to the Races",
         "content": "2021-01-09.json"
+    }, {
+        "title": "(1/16/2021) All You Need Is Love",
+        "content": "2021-01-16.json"
+    }, {
+        "title": "(1/23/2021) Myne as Miles Vorkosigan",
+        "content": "2021-01-23.json"
+    }, {
+        "title": "(1/30/2021) When the New Becomes the Normal",
+        "content": "2021-01-30.json"
     }]
 }
