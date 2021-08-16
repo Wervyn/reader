@@ -12,7 +12,7 @@
             </div>
             <div v-for="(line, index) in chapter.content" :key="'line'+index">
                 <p v-if="!!line && line != '---' && line.slice(0,4) != 'img='" class="text-justify">
-                    <span class="width:15px; overflow:hidden;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="spacer"></span>
                     <span v-for="(substr, i) in line.split('__')" :key="'line'+index+'part'+i">
                         <a v-if="substr == '*'" class="footnote"
                             :name="`anchor-${anchor(index, i)}`" :href="`#footnote-${anchor(index, i)}`">
@@ -23,6 +23,7 @@
                         </a>
                         <a v-else-if="substr.slice(0,2) == '**' && substr.slice(-2) == '**'" style="font-style: italic; font-weight: bold;">{{ substr.slice(2, -2) }}</a>
                         <a v-else-if="substr[0] == '*' && substr.slice(-1) == '*'" style="font-weight: bold;">{{ substr.slice(1, -1) }}</a>
+                        <a v-else-if="substr[0] == '~' && substr.slice(-1) == '~'" style="text-decoration: line-through;">{{ substr.slice(1, -1) }}</a>
                         <a v-else :style="{'font-style': i%2 ? 'italic' : 'normal'}">{{ substr }}</a>
                     </span>
                 </p>
@@ -54,6 +55,7 @@
                         </a>
                         <a v-else-if="substr.slice(0,2) == '**' && substr.slice(-2) == '**'" style="font-style: italic; font-weight: bold;">{{ substr.slice(2, -2) }}</a>
                         <a v-else-if="substr[0] == '*' && substr.slice(-1) == '*'" style="font-weight: bold;">{{ substr.slice(1, -1) }}</a>
+                        <a v-else-if="substr[0] == '~' && substr.slice(-1) == '~'" style="text-decoration: line-through;">{{ substr.slice(1, -1) }}</a>
                         <a v-else :style="{'font-style': i%2 ? 'italic' : 'normal'}">{{ substr }}</a>
                     </span>
                 </p>
@@ -106,6 +108,11 @@ export default {
         },
         scrollToTop() {
             this.$refs.mainPanel.scrollTop = 0;
+            if (this.chapterNumber != -1) {
+                this.$refs.mainPanel.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         }
     }
 }
@@ -159,5 +166,12 @@ export default {
     .info-line {
         display: inline-block;
         padding-left: 10px;
+    }
+    .spacer {
+        min-width: 20px;
+        min-height: 15px;
+        max-width:20px;
+        max-height:15px;
+        display: inline-block;
     }
 </style>

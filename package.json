@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "glob-parent": "^6.0.1",
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
     "vue": "^3.0.0-0",
     "vue-audio": "0.0.12",
+    "vue-audio-better": "^3.0.1",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
@@ -38,6 +40,9 @@
       "parser": "babel-eslint"
     },
     "rules": {}
+  },
+  "resolutions": {
+    "glob-parent": "5.1.2"
   },
   "browserslist": [
     "> 1%",

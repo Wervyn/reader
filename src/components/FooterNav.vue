@@ -2,7 +2,7 @@
     <div class="container">
         <ul class="nav nav-fill justify-content-center">
             <li class="nav-item chapter-count">
-                {{ index+1 }} / {{ max+1 }}
+                {{ index >= 0 ? index + 1 : "--" }} / {{ max+1 }}
             </li>
             <li class="nav-item">
                 <router-link :to="`/reader/${book}/0`" class="nav-link" :class="lowerBound()">▌◀</router-link>

@@ -1,6 +1,6 @@
 <template>
     <div class="container justify-content-left">
-        <div><router-link :to="`/reader/${bookNumber}`" class="book-title nav-link" ref="titleLink">
+        <div><router-link :to="`/reader/${bookNumber}/-2`" class="book-title nav-link" ref="titleLink">
             <h3>{{ book.title }}</h3>
         </router-link></div>
         <div class="scroll-pane" :style="{'max-height': `calc(100% - 40px - ${titleHeight}px)`}" ref="sidebarContent" @scroll="setScroll()">
@@ -51,10 +51,12 @@ export default {
             this.setScroll();
             if (window.innerWidth <= 575) return;
             var el = document.querySelector(`#chapter-${index}`);
-            el.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
+            if (el) {
+                el.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
         },
         dynamicScrollbar() {
             if (this.offsetHeight >= this.scrollHeight) {

@@ -8,9 +8,8 @@
         "title": "Part II 🔒",
         "content": "part2-nav.json"
     }, {
-        "title": "Part III",
-        "content": "",
-        "disabled": true
+        "title": "Part III 🔒",
+        "content": "part3-nav.json"
     }, {
         "title": "Part IV",
         "content": "",
