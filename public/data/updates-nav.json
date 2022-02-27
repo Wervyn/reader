@@ -3,6 +3,7 @@
     "default": "landing.json",
     "dir": "updates",
     "reverse": true,
+    "showSpoilers": true,
     "chapters": [{
         "title": "(8/22/2020) Welcome to This Thing",
         "content": "2020-08-22.json"
@@ -195,5 +196,27 @@
     }, {
         "title": "(7/21/2021) Small Victories",
         "content": "2021-07-21.json"
+    }, {
+        "title": "(8/16/2021) Plugging Along",
+        "content": "2021-08-16.json"
+    }, {
+        "title": "(8/23/2021) In It for the Long Haul",
+         "content": "2021-08-23.json"
+    }, {
+        "title": "(9/2/2021) Inevitable Delays",
+        "content": "2021-09-02.json"
+    }, {
+        "title": "(1/22/2022) Oof",
+        "content": "2022-01-22.json"
+    }, {
+        "title": "(2/15/2022) Six of One and Half a Dozen of the Other",
+        "content": "2022-02-15.json"
+    }, {
+        "title": "(2/20/2022) Presented in Glorious Extra-Color",
+        "content": "2022-02-20.json"
+    }, {
+        "title": "(2/26/2022) Snape Kills Dumbledore",
+        "spoilerTitle": "(2/26/2022) ***** Kills *****",
+        "content": "2022-02-26.json"
     }]
 }

@@ -4,8 +4,8 @@
             <vue-audio v-if="chapter.audio" :file="`/wervyn/honzuki/data/${chapter.audio}`" />
             <br v-if="chapter.audio" />
             <h2 class="justify-content-center">
-                <a v-if="chapter.titlelink" :href="chapter.titlelink" target="_blank">{{ chapter.title }}</a>
-                <a v-else>{{ chapter.title }}</a>
+                <a v-if="chapter.titlelink" :href="chapter.titlelink" target="_blank">{{ hideSpoilers() && chapter.spoilerTitle ? chapter.spoilerTitle : chapter.title }}</a>
+                <a v-else>{{ hideSpoilers() && chapter.spoilerTitle ? chapter.spoilerTitle : chapter.title }}</a>
             </h2>
             <div v-if="chapter.metadata" class="info">
                 <div v-for="(value, key, index) in chapter.metadata" class="info-line" :key="'info'+index"><strong>{{ key }}:</strong> {{ value }} </div>
@@ -105,6 +105,9 @@ export default {
         },
         isDark() {
             return localStorage.getItem("isDark") ? "dark" : "";
+        },
+        hideSpoilers() {
+            return localStorage.getItem("hideSpoilers") ? true : false;
         },
         scrollToTop() {
             this.$refs.mainPanel.scrollTop = 0;

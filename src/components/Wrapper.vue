@@ -5,6 +5,7 @@
         <h1 v-if="topnav.title" class="title">{{ topnav.title }}</h1>
         <h4 v-if="topnav.subtitle" class="subtitle">{{ topnav.subtitle }}</h4>
         <div class="darkButton" @click="toggleDarkMode()">{{ isDark() ? "Light Mode" : "Dark Mode" }}</div>
+        <div class="spoilerButton" @click="toggleSpoilers()">{{ hideSpoilers() ? "Show Spoilers" : "Low Spoilers" }}</div>
       </div></div>
       <div class="row">
         <div class="col-sm-3 center-text home-link">
@@ -57,6 +58,17 @@ export default {
       } else {
         localStorage.setItem("isDark", "true");
         document.body.className = "dark";
+      }
+      this.rerender++;
+    },
+    hideSpoilers() {
+      return localStorage.getItem("hideSpoilers") ? true : false;
+    },
+    toggleSpoilers() {
+      if (this.hideSpoilers()) {
+        localStorage.removeItem("hideSpoilers");
+      } else {
+        localStorage.setItem("hideSpoilers", true);
       }
       this.rerender++;
     }
@@ -206,8 +218,8 @@ body.dark {
 
 .darkButton {
   position: absolute;
-  top: 20px;
-  right: 40px;
+  top: -5px;
+  right: 15px;
   cursor: pointer;
   border-radius: 10px;
   background-color: #22b;
@@ -216,6 +228,20 @@ body.dark {
   opacity: 0.5;
 }
 .darkButton:hover {
+  opacity: 1;
+}
+.spoilerButton {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #22b;
+  color: #fff;
+  padding: 10px;
+  opacity: 0.5;
+}
+.spoilerButton:hover {
   opacity: 1;
 }
 

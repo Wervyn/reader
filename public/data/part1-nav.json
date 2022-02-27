@@ -4,6 +4,7 @@
     "dir": "part1",
     "chapters": [{
         "title": "Prologue",
+        "spoilerTitle": "Prologue",
         "content": "chapter-000.json"
     }, {
         "title": "A New Life",
@@ -220,18 +221,23 @@
         "content": "chapter-071.json"
     }, {
         "title": "Tuuli – A Visit with Mrs. Corinna",
+        "spoilerTitle": "Interlude – Tuuli",
         "content": "chapter-072.json"
     }, {
         "title": "Ilse – Confectionary Recipes",
+        "spoilerTitle": "Interlude – Ilse",
         "content": "chapter-073.json"
     }, {
         "title": "Benno – The Pound Cake Tasting Party",
+        "spoilerTitle": "Interlude – Benno",
         "content": "chapter-074.json"
     }, {
         "title": "Mark – The Master and I",
+        "spoilerTitle": "Interlude – Mark",
         "content": "chapter-075.json"
     }, {
         "title": "Gunther – The Work of a Gatekeeper",
+        "spoilerTitle": "Interlude – Gunther",
         "content": "chapter-076.json"
     }]
 }

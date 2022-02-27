@@ -1,14 +1,14 @@
 <template>
     <div class="container justify-content-left">
         <div><router-link :to="`/reader/${bookNumber}/-2`" class="book-title nav-link" ref="titleLink">
-            <h3>{{ book.title }}</h3>
+            <h3>{{ hideSpoilers() && book.spoilerTitle ? book.spoilerTitle : book.title }}</h3>
         </router-link></div>
         <div class="scroll-pane" :style="{'max-height': `calc(100% - 40px - ${titleHeight}px)`}" ref="sidebarContent" @scroll="setScroll()">
             <ul class="nav flex-column">
                 <li class="nav-item" v-for="index in listChapters()" :key="'chapter'+index">
                     <router-link :id="'chapter-'+index" :to="`/reader/${bookNumber}/${index}`" class="nav-link"
                         :class="dynamicClass(index)">
-                        {{ book.chapters[index].title }}
+                        {{ spoilerTitle(index) }}
                     </router-link>
                 </li>
             </ul>
@@ -66,7 +66,20 @@ export default {
                 'height': `${Math.trunc(this.offsetHeight * this.offsetHeight / this.scrollHeight)}px`,
                 'top': `${Math.trunc(this.titleHeight + this.scrollTop * this.offsetHeight / this.scrollHeight + 10)}px`
             };
-        }
+        },
+        hideSpoilers() {
+            return localStorage.getItem("hideSpoilers") ? true : false;
+        },
+        spoilerTitle(index) {
+            if (this.hideSpoilers()) {
+                if (this.book.chapters[index].spoilerTitle) {
+                    return this.book.chapters[index].spoilerTitle;
+                } else if (!this.book.showSpoilers) {
+                    return "Chapter " + index;
+                }
+            }
+            return this.book.chapters[index].title 
+        },
     },
     mounted() {
         window.addEventListener('resize', this.setTitleHeight);
