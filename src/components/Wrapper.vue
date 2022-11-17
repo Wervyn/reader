@@ -24,6 +24,7 @@
 
 <script>
 import { reactive, ref, toRefs, onMounted, onBeforeUnmount } from 'vue'
+import { useRouter } from 'vue-router'
 
 import TopNav from './TopNav.vue'
 import SideNav from './SideNav.vue'
@@ -85,6 +86,9 @@ export default {
         let bookpath = `${datapath}updates-nav.json`
         if (this.bookNumber >= 0) {
           bookpath = `${datapath}${this.topnav.books[this.bookNumber].content}`;
+          localStorage.setItem("lastBook", this.bookNumber);
+        } else {
+          localStorage.removeItem("lastBook");
         }
         tempfetch = await fetch(bookpath, {cache: "no-cache"});
         this.book = await tempfetch.json();
@@ -92,8 +96,10 @@ export default {
         let chapterpath = `${datapath}landing.json`;
         if (this.chapterNumber < 0) {
           if (this.book.default) chapterpath = `${datapath}${this.book.default}`;
+          localStorage.removeItem("lastChapter");
         } else {
           chapterpath = `${datapath}${this.book.dir ? this.book.dir + '/' : ''}${this.book.chapters[this.chapterNumber].content}`;
+          localStorage.setItem("lastChapter", this.chapterNumber);
         }
         tempfetch = await fetch(chapterpath, {cache: "no-cache"})
           .then(async response => {
@@ -119,12 +125,25 @@ export default {
     });
 
     const topBar = ref(null);
+    const router = useRouter();
 
     function setTopHeight() {
       data.topHeight = topBar.value ? topBar.value.clientHeight : 0;
     }
 
     onMounted(async () => {
+        if (props.bookNumber < 0 && props.chapterNumber < 0) {
+          if (localStorage.getItem("lastBook")) {
+            if (localStorage.getItem("lastChapter")) {
+              router.push(`/reader/${localStorage.getItem("lastBook")}/${localStorage.getItem("lastChapter")}`);
+            } else {
+              router.push(`/reader/${localStorage.getItem("lastBook")}`);
+            }
+          } else if (localStorage.getItem("lastChapter")) {
+            router.push(`/reader/-1/${localStorage.getItem("lastChapter")}`);
+          }
+        }
+
         window.addEventListener('resize', setTopHeight);
         setTimeout(setTopHeight, 500);
         document.body.className = localStorage.getItem("isDark") ? "dark" : "";

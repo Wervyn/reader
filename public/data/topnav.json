@@ -11,12 +11,17 @@
         "title": "Part III 🔒",
         "content": "part3-nav.json"
     }, {
-        "title": "Part IV",
-        "content": "",
-        "disabled": true
+        "title": "Part IV 🔒",
+        "content": "part4-nav.json"
     }, {
         "title": "Part V",
         "content": "",
         "disabled": true
+    }, {
+        "title": "Side Stories 🔒",
+        "content": "ss-nav.json"
+    }, {
+        "title": "Extra",
+        "content": "extra-nav.json"
     }]
 }
