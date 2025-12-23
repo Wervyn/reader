@@ -11,7 +11,7 @@
                 <router-link :to="`/reader/${book}/${+index-1}`" class="nav-link" :class="lowerBound()">◀</router-link>
             </li>
             <li class="nav-item">
-                <router-link :to="`/reader/${book}/${+index+1}`" class="nav-link" :class="upperBound()">▶</router-link>
+                <router-link :to="`/reader/${book}/${+index < 0 ? 0 : +index+1}`" class="nav-link" :class="upperBound()">▶</router-link>
             </li>
             <li class="nav-item">
                 <router-link :to="`/reader/${book}/${max}`" class="nav-link" :class="upperBound()">▶▐</router-link>

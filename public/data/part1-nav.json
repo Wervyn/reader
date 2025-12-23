@@ -10,16 +10,16 @@
         "title": "A New Life",
         "content": "chapter-001.json"
     }, {
-        "title": "Home Exploration",
+        "title": "Exploring the House",
         "content": "chapter-002.json"
     }, {
-        "title": "City Exploration",
+        "title": "Exploring the City",
         "content": "chapter-003.json"
     }, {
         "title": "Books: Unobtainable",
         "content": "chapter-004.json"
     }, {
-        "title": "Tuuli – My Weird Little Sister",
+        "title": "Tuuli — My Weird Little Sister",
         "content": "chapter-005.json"
     }, {
         "title": "Neighborhood Boys",
@@ -40,7 +40,7 @@
         "title": "Defeated by the Ancient Egyptians",
         "content": "chapter-011.json"
     }, {
-        "title": "Lutz – My Savior",
+        "title": "Lutz — My Savior",
         "content": "chapter-012.json"
     }, {
         "title": "Mr. Otto’s Assistant",
@@ -55,7 +55,7 @@
         "title": "Mesopotamian Civilization, Banzai",
         "content": "chapter-016.json"
     }, {
-        "title": "Gunther – My Daughter the Wannabe Criminal?!",
+        "title": "Gunther — My Daughter the Wannabe Criminal?!",
         "content": "chapter-017.json"
     }, {
         "title": "Clay Tablets Are No Good",
@@ -79,7 +79,7 @@
         "title": "The Meeting with the Merchant",
         "content": "chapter-024.json"
     }, {
-        "title": "Otto – My Assistant",
+        "title": "Otto — My Assistant",
         "content": "chapter-025.json"
     }, {
         "title": "The Road to Washi",
@@ -142,7 +142,7 @@
         "title": "And So We Tried Making Some",
         "content": "chapter-045.json"
     }, {
-        "title": "Lutz – The Power of Money",
+        "title": "Lutz — The Power of Money",
         "content": "chapter-046.json"
     }, {
         "title": "Myne Collapses",
@@ -220,24 +220,24 @@
         "title": "The Settlement",
         "content": "chapter-071.json"
     }, {
-        "title": "Tuuli – A Visit with Mrs. Corinna",
-        "spoilerTitle": "Interlude – Tuuli",
+        "title": "Tuuli — A Visit with Madam Corinna",
+        "spoilerTitle": "Interlude — Tuuli",
         "content": "chapter-072.json"
     }, {
-        "title": "Ilse – Confectionary Recipes",
-        "spoilerTitle": "Interlude – Ilse",
+        "title": "Ilse — Confectionary Recipes",
+        "spoilerTitle": "Interlude — Ilse",
         "content": "chapter-073.json"
     }, {
-        "title": "Benno – The Pound Cake Tasting Party",
-        "spoilerTitle": "Interlude – Benno",
+        "title": "Benno — The Pound Cake Tasting Party",
+        "spoilerTitle": "Interlude — Benno",
         "content": "chapter-074.json"
     }, {
-        "title": "Mark – The Master and I",
-        "spoilerTitle": "Interlude – Mark",
+        "title": "Mark — The Master and I",
+        "spoilerTitle": "Interlude — Mark",
         "content": "chapter-075.json"
     }, {
-        "title": "Gunther – The Work of a Gatekeeper",
-        "spoilerTitle": "Interlude – Gunther",
+        "title": "Gunther — The Work of a Gatekeeper",
+        "spoilerTitle": "Interlude — Gunther",
         "content": "chapter-076.json"
     }]
 }

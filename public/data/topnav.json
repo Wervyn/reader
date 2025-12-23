@@ -14,9 +14,8 @@
         "title": "Part IV 🔒",
         "content": "part4-nav.json"
     }, {
-        "title": "Part V",
-        "content": "",
-        "disabled": true
+        "title": "Part V 🔒",
+        "content": "part5-nav.json"
     }, {
         "title": "Side Stories 🔒",
         "content": "ss-nav.json"
