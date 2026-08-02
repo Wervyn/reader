@@ -30,7 +30,8 @@ import TopNav from './TopNav.vue'
 import SideNav from './SideNav.vue'
 import MainContent from './MainContent.vue'
 
-let datapath = "/wervyn/honzuki/data/";
+const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`
+const datapath = `${basePath}data/`
 
 export default {
   name: 'Wrapper',

@@ -80,17 +80,30 @@ export default {
         chapterNumber: Number,
         totalChapters: Number
     },
-    created() {
-        this.anchorDict = {},
-        this.footnoteDict = {};
+    data() {
+        return {
+            anchorDict: {},
+            footnoteDict: {}
+        }
     },
     watch: {
-        'chapterNumber': function() {
-            this.anchorDict = {},
-            this.footnoteDict = {}
+        chapter: {
+            handler() {
+                this.resetCounters()
+            },
+            immediate: true,
+            deep: true,
+            flush: 'sync'
+        },
+        chapterNumber() {
+            this.resetCounters()
         }
     },
     methods: {
+        resetCounters() {
+            this.anchorDict = {}
+            this.footnoteDict = {}
+        },
         anchor(index, pos) {
             if (!this.anchorDict[index*1000+pos]) {
                 this.anchorDict[index*1000+pos] = Object.keys(this.anchorDict).length + 1;
